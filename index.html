@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAE - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar_header_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Conteneur pour la navbar -->
+    <div id="navbar-container"></div>
+
+    <div class="rafale-container">
+        <div class="circle"></div> 
+    </div>
+
+    <div class="header">
+        <img src="/SITE CAE/rafale.png" alt="Rafale" class="rafale">
+        <h1>Cercle Aéronautique de l'Estaca</h1>
+        <div class="btn-container">
+            <button>Décollage Immédiat !</button>
+            <button>J'adhère au CAE</button>
+        </div>
+    </div>
+
+    <div class="logoPoles">
+        <div class="Poles">
+            <img src="/SITE CAE/logo CAE/event.PNG" alt="Pôle Event" onclick="openPage()">
+        </div>
+        <div class="Poles">
+            <img src="/SITE CAE/logo CAE/com.PNG" alt="Pôle COM">
+        </div>
+        <div class="Poles">
+            <img src="/SITE CAE/logo CAE/sport.PNG" alt="Pôle Sport">
+        </div>
+        <div class="Poles">
+            <img src="/SITE CAE/logo CAE/bureau.PNG" alt="Bureau">
+        </div>
+        <div class="Poles">
+            <img src="/SITE CAE/logo CAE/ACS.PNG" alt="Cockpit System">
+        </div>
+        <div class="Poles">
+            <img src="/SITE CAE/logo CAE/Savannah.PNG" alt="Savannah">
+        </div>
+        <div class="Poles">
+            <img src="/SITE CAE/logo CAE/heritage.PNG" alt="Héritage 1876">
+        </div>
+    </div>
+
+    <div class="Histoire">
+        <h1>1988.</h1>
+        <p>
+            Sous l’impulsion d’étudiants passionnés, le Cercle Aéronautique de l’ESTACA (CAE) voit le jour. Son objectif est clair : offrir aux étudiants de l’ESTACA des activités variées, telles que des visites, des baptêmes de l’air, des conférences et des voyages, le tout autour de l’univers de l’aéronautique.
+            Aujourd’hui, fort de plus d’une centaine de membres, le CAE s’efforce de perpétuer l’esprit et les valeurs qui animent l’association depuis sa création.
+        </p>
+        <div class="LogoHistoriques">
+            <div class="LogoHisto">
+                <img src="/SITE CAE/logo CAE/Capture d’écran 2024-12-14 à 18.50.21.png" alt="logo historique 1">
+            </div>
+            <div class="LogoHisto">
+                <img src="/SITE CAE/logo CAE/Capture d’écran 2024-12-14 à 18.48.43.png" alt="logo historique 2">
+            </div>
+            <div class="LogoHisto">
+                <img src="/SITE CAE/logo CAE/logoCAE-reseauxSociauxCarreTransparent.PNG" alt="logo historique 3">
+            </div>
+            <div class="LogoHisto">
+                <img src="/SITE CAE/logo CAE/logoCAE2020 (1).png" alt="logo historique 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="Nospartenaires">
+        <h1>Nos partenaires</h1>
+        <div class="Parteners">
+            <div class="LogoPartenaires">
+                <img src="/SITE CAE/logo CAE/ESTACA_Ecole_d'ingénieurs_logo.svg.png" alt="logo Estaca">
+            </div>
+            <div class="LogoPartenaires">
+                <img src="/SITE CAE/logo CAE/Isae-logo-groupe.jpg" alt="logo Isae">
+            </div>
+            <div class="LogoPartenaires">
+                <img src="/SITE CAE/logo CAE/Safran_2016_logo.svg.png" alt="logo Safran">
+            </div>
+            <div class="LogoPartenaires">
+                <img src="/SITE CAE/logo CAE/agap2.png" alt="logo Agap2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteneur pour le footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Fonction pour charger le contenu de la navbar et du footer à partir de "header-footer.html"
+        function loadNavbarFooter() {
+            fetch('header-footer.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors du chargement de la navbar et du footer');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+                    const navbar = doc.querySelector('header');
+                    const footer = doc.querySelector('footer');
+
+                    // Ajouter la navbar et le footer dans la page
+                    if (navbar) {
+                        document.getElementById('navbar-container').innerHTML = navbar.innerHTML;
+                    }
+                    if (footer) {
+                        document.getElementById('footer-container').innerHTML = footer.innerHTML;
+                    }
+
+                    // Attacher les événements après avoir ajouté la navbar
+                    attachNavbarEvents();
+                })
+                .catch(error => {
+                    console.error('Erreur :', error);
+                });
+        }
+
+        // Fonction pour attacher les événements de la navbar
+        function attachNavbarEvents() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.style.transform = navLinks.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+                });
+            }
+        }
+
+        // Charger la navbar et le footer lorsque la page est prête
+        window.onload = function() {
+            loadNavbarFooter();
+        };
+
+        // Fonction pour ouvrir une nouvelle page
+        function openPage() {
+            window.open("event.html", "_blank");
+        }
+    </script>
+
+</body>
+</html>
