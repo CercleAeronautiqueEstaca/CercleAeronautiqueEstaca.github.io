@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savannah</title>
+
+  <!-- Feuilles de style externes -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar_header_style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Préchargement de la police personnalisée -->
+  <link rel="preload" href="Polices/LifelogoEasy.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Style interne -->
+  <style>
+    @font-face {
+      font-family: 'Lifelogo Easy';
+      src: url('Polices/LifelogoEasy.woff2') format('woff2'),
+           url('Polices/LifelogoEasy.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#0c3e74 0%, #23627b 100%);
+      min-height: 200vh; /* pour pouvoir scroller */
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 10%;
+      z-index: 5000;
+    }
+
+    h1 {
+      font-family: 'Lifelogo Easy', sans-serif;
+      font-weight: normal;
+      font-size: 8rem;
+      text-align: center;
+      margin-top: -150px;
+      color: #e1e1e1;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: normal;
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 10px;
+      color: #e1e1e1;
+    }
+
+    .Savannah {
+      width: 50%;
+      height: auto;
+      display: block;
+      margin: 100px auto 0 auto;
+      transition: transform 0.1s ease-out;
+      will-change: transform;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Conteneur pour la navbar -->
+    <div id="navbar-container"></div>
+    <!-- Conteneur pour la navbar -->
+
+  <div class="header_savannah">
+    <img src="/SITE CAE/ILLUSTRATIONS/PageSavannah/Savannah_illustration.png" alt="Savannah" class="Savannah" id="avion"/>
+    <h1>Savannah</h1>
+    <h2>Un ULM à monter soi-même !</h2>
+  </div>
+
+  <!-- Script pour effet de vol -->
+  <script>
+    // Charger la navbar et le footer
+    fetch('header-footer.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors du chargement des éléments communs.');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+                    const navbar = doc.querySelector('header');
+                    const footer = doc.querySelector('footer');
+
+                    if (navbar) {
+                        document.getElementById('navbar-container').appendChild(navbar.cloneNode(true));
+                    }
+
+                    if (footer) {
+                        document.getElementById('footer-container').appendChild(footer.cloneNode(true));
+                    }
+
+                    attachNavbarEvents();
+                })
+                .catch(error => {
+                    console.error('Erreur lors du chargement des éléments communs:', error);
+                });
+
+    window.addEventListener('scroll', () => {
+      const avion = document.getElementById('avion');
+      const scrollY = window.scrollY;
+      avion.style.transform = `translateX(-${scrollY * 0.3}px)`;
+    });
+
+    window.addEventListener('scroll', () => {
+      // Animation de l'image en fonction du scroll
+      const avion = document.getElementById('avion');
+      const scrollY = window.scrollY;
+      avion.style.transform = `translateX(-${scrollY * 0.3}px)`;
+
+      // Modification de la navbar
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.style.backgroundColor = '#23627b'; // Change la couleur du fond lorsque l'on scrolle
+      } else {
+        navbar.style.backgroundColor = 'transparent'; // Remet la navbar transparente quand on est tout en haut
+      }
+    });
+  </script>
+</body>
+</html>
