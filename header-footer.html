@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Header et Footer</title>
+  <style>
+    /* NAVBAR GÉNÉRALE */
+    .navbar {
+      background-color: #000;
+      color: white;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* LOGO */
+    .logo {
+        height: auto;
+        max-height: 60px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    /* BOUTON TOGGLE */
+    .menu-toggle {
+      background: none;
+      color: white;
+      font-size: 28px;
+      border: none;
+      cursor: pointer;
+      display: none;
+      transition: transform 0.3s;
+      z-index: 10000;
+    }
+
+    /* LIENS */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-btn {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* RESPONSIVE MOBILE */
+    @media (max-width: 768px) {
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 1000;
+      }
+
+      .logo {
+        max-height: 40px;
+        margin-right: auto;
+      }
+
+      .menu-toggle {
+        display: block;
+        font-size: 24px;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        z-index: 9999;
+        padding: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #083D77;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+    }
+
+    .footer-section h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .footer-section p,
+    .footer-section ul {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: #c6c4c0;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #bbb;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="/SITE CAE/logo CAE/logoCAE2020_BLANC.png" alt="Logo CAE" class="logo" />
+        </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#decouvrir">Je découvre</a></li>
+        <li><a href="#evenements">Nos évènements</a></li>
+        <li><a href="#projets">Nos projets</a></li>
+        <li><a href="#contact">Nous contacter</a></li>
+      </ul>
+      <button class="nav-btn">J'adhère au CAE</button>
+    </nav>
+  </header>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>À propos</h3>
+        <p>
+          Le Cercle Aéronautique de l'ESTACA regroupe des passionnés d'aviation, organisant des événements, projets techniques et activités autour de l'aéronautique.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Liens rapides</h3>
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">Notre histoire</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#events">Événements</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Nous contacter</h3>
+        <ul>
+          <li>Email: cercleaero@estaca.eu</li>
+          <li>Adresse: 12 Avenue Paul Delouvrier (RD10), 78180 Montigny-le-Bretonneux</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Cercle Aéronautique de l'ESTACA. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          menuToggle.style.transform = navLinks.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
