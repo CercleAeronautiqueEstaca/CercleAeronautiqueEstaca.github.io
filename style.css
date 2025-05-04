@@ -1,0 +1,250 @@
+/* ==================== 
+   Réinitialisation globale 
+==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+
+/* ==================== 
+   Header Principal 
+==================== */
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#0c3e74 0%, #2c455f 49%, #083D77 100%);
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.header h1 {
+    margin-top: -380px;
+    margin-bottom: 10px;
+    font-size: 4vw;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-container{
+    margin: 10px auto;
+    align-items: center;
+   }
+   
+.header button{
+       position: relative;
+       z-index: 1;
+       border: 0;
+       margin-top: -40px;
+       background-color: #fff;
+       outline: 0;
+       display: inline-flex;
+       align-items: center;
+       font-size: 10px;
+       margin-right: 25px;
+       border-radius: 15px;
+       cursor: pointer;
+   }
+
+.header button:hover {
+    transform: scale(1.1); /* Animation au survol */
+}
+
+/* ==================== 
+   Conteneur du Rafale 
+==================== */
+.rafale-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    z-index: 0;
+}
+
+.rafale {
+    position: relative;
+    z-index: 1; /* Garantit que l'image reste visible */
+    width: 600px; /* Taille de l'image */
+    height: auto;
+    top: -240px;
+}
+
+/* Cercle lumineux */
+.circle {
+    position: absolute;
+    top: 80px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 60%);
+    border-radius: 50%;
+    filter: blur(20px);
+    z-index: 0;
+}
+
+/* ==================== 
+   Section des pôles 
+==================== */
+.logoPoles {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    margin-top: -220px;
+}
+
+/* Style pour chaque cercle */
+.Poles {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.Poles img {
+    width: 150%;
+    height: auto;
+}
+
+.Poles:hover {
+    transform: scale(1.2); /* Agrandit de 20% */
+}
+
+/* Overlay sombre */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    transition: opacity 0.5s ease;
+}
+
+/* Section cachée */
+#hidden-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+#hidden-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Afficher les éléments */
+#overlay.active,
+#hidden-section.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==================== 
+   Histoire 
+==================== */
+
+.Histoire {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#0c3e74 0%, #050518 20%, #04051e 80%, #083D77 100%);
+    padding: 190px 10%;
+    flex-direction: column;
+}
+
+.LogoHisto img {
+    width: 100%; /* Remplit l'espace disponible dans le conteneur */
+    max-width: 150px; /* Limite la largeur */
+    height: 150px; /* Hauteur uniforme */
+    object-fit: contain; /* Ajuste l'image à la taille donnée sans la déformer */
+    border-radius: 15px; /* Coins arrondis */
+    background-color: transparent; /* Pas de couleur de fond */
+    padding: 5px; /* Espacement interne autour de l'image */
+}
+
+.LogoHistoriques {
+    display: flex; /* Active le modèle Flexbox */
+    flex-wrap: wrap; /* Permet aux images de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 20px; /* Espacement entre les images */
+    padding: 20px; /* Espacement autour du conteneur */
+}
+
+.Histoire h1 {
+    font-size: 70px;
+    justify-content: center;
+    align-items:baseline;
+    color: #fff;
+}
+.Histoire p {
+    color: #fff;
+    justify-content: center;
+    align-items:center;
+}
+
+/* ==================== 
+   Nos Partenaires
+==================== */
+.Nospartenaires {
+    width: 100%;
+    min-height: 100vh;
+    background: #0c3e74;
+    padding: 50px 10%;
+    flex-direction: column;
+}
+.Nospartenaires h1 {
+    color:#fff;
+}
+.LogoPartenaires img {
+    width: 100%; /* Remplit l'espace disponible dans le conteneur */
+    max-width: 150px; /* Limite la largeur */
+    height: 150px; /* Hauteur uniforme */
+    object-fit: contain; /* Ajuste l'image à la taille donnée sans la déformer */
+    border-radius: 15px; /* Coins arrondis */
+    background-color: transparent; /* Pas de couleur de fond */
+    padding: 5px; /* Espacement interne autour de l'image */
+}
+
+.Parteners {
+    display: flex; /* Active le modèle Flexbox */
+    flex-wrap: wrap; /* Permet aux images de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 20px; /* Espacement entre les images */
+    padding: 20px; /* Espacement autour du conteneur */
+}
+
+
+
+
