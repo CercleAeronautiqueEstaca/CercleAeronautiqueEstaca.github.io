@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savannah</title>
+
+  <!-- Feuilles de style externes -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar_footer.css">
+  <link rel="stylesheet" href="Savannah_style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Préchargement de la police personnalisée -->
+  <link rel="preload" href="Polices/LifelogoEasy.woff2" as="font" type="font/woff2" crossorigin />
+
+</head>
+
+<body>
+    <!-- Conteneur pour la navbar -->
+    <div id="navbar-container"></div>
+    <!-- Conteneur pour la navbar -->
+
+  <div class="header_savannah">
+    <img src="/illustration_savannah/Savannah_illustration.png" alt="Savannah" class="Savannah" id="avion"/>
+    <h1>Savannah</h1>
+    <h2>Un ULM à monter !</h2>
+
+    <div class="Présentation">
+      <p>
+        Créé en 2019 en partenariat avec l'aéroclub Camille Georges Jousse et l'AFMAÉ sur l'aérodrome de Toussus-le-Noble, le projet Savannah est le premier projet technique de l'association portant sur la création d'un aéronef ayant pour but d'être exploité en vol. Le projet consiste en la construction et la mise en état de navigabilité d'un ULM (Ultra Léger Motorisé) de type Savannah à partir d'un kit importé depuis l'usine ICP située à Milan en Italie.  
+      </p>
+  </div>
+
+
+    <div class="specifications-container">
+      <div class="specifications-grid">
+        <!-- Première ligne -->
+        <div class="spec-item">
+          <img src="/illustration_savannah/LONsav.png" alt="Longueur" class="spec-icon">
+          <h3 class="spec-title">Longueur</h3>
+          <p class="spec-value">6,60 m</p>
+        </div>
+        
+        <div class="spec-item">
+          <img src="/illustration_savannah/ENVsav.png" alt="Envergure" class="spec-icon">
+          <h3 class="spec-title">Envergure</h3>
+          <p class="spec-value">9,00 m</p>
+        </div>
+        
+        <div class="spec-item">
+          <img src="/illustration_savannah/HAUsav.png" alt="Hauteur" class="spec-icon">
+          <h3 class="spec-title">Hauteur</h3>
+          <p class="spec-value">2,58 m</p>
+        </div>
+        
+        <!-- Deuxième ligne -->
+        <div class="spec-item">
+          <img src="/illustration_savannah/PASsav.png" alt="Passagers" class="spec-icon">
+          <h3 class="spec-title">Passagers</h3>
+          <p class="spec-value">2</p>
+        </div>
+        
+        <div class="spec-item">
+          <img src="/illustration_savannah/RAYsav.png" alt="Rayon d'action" class="spec-icon">
+          <h3 class="spec-title">Autonomie</h3>
+          <p class="spec-value">4 h</p>
+        </div>
+        
+        <div class="spec-item">
+          <img src="/illustration_savannah/VITsav.png" alt="Vitesse" class="spec-icon">
+          <h3 class="spec-title">Vitesse</h3>
+          <p class="spec-value">180 km/h</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cloud">
+      <img src="/illustration_savannah/Cloud_2.png">
+    </div>
+
+
+    <div class ="Part">
+      <div class="Parteners">
+
+        <h1>Les partenaires</h1>
+        <p>Le projet Savannah existe grâce au soutien de nos partenaires, qui nous apportent matériaux, expertise et ressources essentielles. Leur engagement nous permet de concrétiser ce projet. Un grand merci à eux pour leur précieuse aide !</p>
+          <div class="partenaires_principaux">
+              <img src="/illustration_partenaires/estaca_logo.png" alt="Estaca" onclick="openPageEstaca()">
+              <img src="/illustration_partenaires/safran_blanc.png" alt="Safran" onclick="openPageSafran()">
+              
+          </div>
+      </div>
+
+
+      <div class="Acteurs">
+        <h1>Les acteurs</h1>
+        <p>Le projet Savannah repose sur une collaboration inédite entre trois structures réunies autour d'une même ambition : faire voler un avion construit collectivement, dans un cadre pédagogique et associatif. Depuis 2019, l'AFMAé, le Cercle Aéronautique de l'ESTACA (CAE) et l'Aéroclub Georges Jousse avancent ensemble, chacun à son échelle, pour faire de ce projet une réussite.</p>
+        <div class="acteurs_principaux">
+            <div class="acteur">
+                <img src="/SITE CAE/logo CAE/logoCAE2020 (1).png" alt="CAE">
+                <p>Le Cercle Aéronautique de l'ESTACA joue un rôle central et concret dans la construction de l'avion : montage, ajustements, manutention… Les étudiants apportent aussi leur vision d'ingénieurs : ils planifient les travaux, rédigent les gammes de montage, et participent activement à la phase finale de préparation au vol. En 2025, leur mission s'élargit avec la rédaction du protocole d'essais, du protocole de maintenance et de la documentation technique sur le câblage spécifique du Savannah. Une implication de bout en bout, qui allie pratique terrain et responsabilité technique.</p>
+            </div>
+            <div class="acteur">
+              <img src="/SITE CAE/ILLUSTRATIONS/Partenaires /logo Afmaé.webp" alt="Afmae" onclick="openPageAfmae()">
+              <p>L'AFMAé utilise le projet Savannah comme un véritable outil pédagogique pour ses apprentis en Bac Pro et BTS aéronautique. Sur le plateau technique du CFA, les jeunes techniciens participent à la construction de l'appareil : montage, ajustement, manipulation des pièces, le tout encadré par leurs formateurs. L'AFMAé fournit également les outils, les installations, et désormais, prend en charge l'immatriculation de l'avion.</p>
+          </div>
+
+          <div class="acteur">
+            <img src="/SITE CAE/logo CAE/jousse-50.png" alt="CGJ" onclick="openPageJousse()">
+            <p>Ancré sur l'aérodrome où est basé le Savannah, l'Aéroclub Georges Jousse accompagne le projet depuis ses débuts. Il fournit l'encadrement technique lors des phases de construction, en lien direct avec l'AFMAé et le CAE. Une fois le montage terminé, le club prendra le relais : l'ULM rejoindra sa flotte, sera entretenu, exploité, et piloté sous sa supervision. L'aéroclub assurant ainsi une continuité entre construction, sécurité et utilisation opérationnelle.</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="anecdote-container">
+      <div class="anecdote-header">
+        <h2>Le savais-tu ?</h2>
+        <div class="dice-container" id="dice-btn">
+          <img src="/illustration_savannah/dice.png" alt="Lancer le dé" class="dice-img" id="dice-img">
+        </div>
+      </div>
+      <div class="anecdote-content" id="anecdote-text">
+        <!-- L'anecdote sera affichée ici -->
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Section Galerie -->
+  <section class="Gallerie">
+    <h1>Galerie</h1>
+    <div class="photo-grid" id="photo-grid">
+      <!-- Les images seront insérées ici par JavaScript -->
+    </div>
+    <button class="toggle-button" id="toggle-button">+</button>
+    <div class="logo_savannah">
+      <img src="/SITE CAE/logo CAE/Savannah.PNG" alt="logoSav" class="logoSav">
+    </div>
+  </section>
+
+  <!-- Modal pour afficher l'image en grand -->
+  <div class="modal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div class="caption" id="modal-caption"></div>
+  </div>
+
+  <div class="Savanne">
+    <img src="/illustration_savannah/savanne_bande_finale.jpg"/>
+  </div>
+
+  <!-- Conteneur pour le footer -->
+  <div id="footer-container"></div>
+
+  <!-- Script pour effet de vol -->
+  <script>
+     // Charger la navbar
+     fetch('navbar.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erreur lors du chargement de la navbar.');
+          }
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById('navbar-container').innerHTML = html;
+          attachNavbarEvents();
+        })
+        .catch(error => {
+          console.error('Erreur navbar :', error);
+        });
+
+      // Charger le footer
+      fetch('footer.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erreur lors du chargement du footer.');
+          }
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById('footer-container').innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Erreur footer :', error);
+        });
+
+        // Fonction pour gérer l'ouverture/fermeture du menu mobile
+      function attachNavbarEvents() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+          menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.style.transform = navLinks.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+          });
+        }
+      }
+      
+
+    window.addEventListener('scroll', () => {
+      const avion = document.getElementById('avion');
+      const scrollY = window.scrollY;
+      avion.style.transform = `translateX(-${scrollY * 0.3}px)`;
+    });
+
+    window.addEventListener('scroll', () => {
+      // Animation de l'image en fonction du scroll
+      const avion = document.getElementById('avion');
+      const scrollY = window.scrollY;
+      avion.style.transform = `translateX(-${scrollY * 0.3}px)`;
+
+      // Modification de la navbar
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.style.backgroundColor = '#23627b'; // Change la couleur du fond lorsque l'on scrolle
+      } else {
+        navbar.style.backgroundColor = 'transparent'; // Remet la navbar transparente quand on est tout en haut
+      }
+    });
+
+    const anecdotes = [
+    "Le Savannah est basé sur le célèbre Zenith STOL CH 701, conçu par l'ingénieur canadien Chris Heintz.",
+    "L'ULM Savannah est reconnu pour ses excellentes capacités ADAC (Atterrissage et Décollage Courts).",
+    "Le Savannah peut décoller en moins de 100 mètres avec deux passagers à bord.",
+    "La structure du Savannah est principalement en aluminium, ce qui lui confère légèreté et résistance.",
+    "Le nom 'Savannah' fait référence aux plaines africaines, symbolisant les vastes espaces que cet ULM peut explorer.",
+    "Le kit de montage du Savannah comprend plus de 3 000 pièces détachées.",
+    "Le montage complet d'un Savannah prend généralement entre 700 et 900 heures de travail selon le niveau d'expérience du constructeur.",
+    "La voilure haute du Savannah lui donne une excellente stabilité en vol.",
+    "Le Savannah peut être équipé de flotteurs pour amerrir sur l'eau.",
+    "Avec un moteur Rotax 912, le Savannah consomme en moyenne entre 13 et 17 litres de carburant par heure de vol.",
+    "Le Savannah est fabriqué par la société italienne ICP (Industria Costruzioni Piani) située près de Milan.",
+    "Le tableau de bord du Savannah peut être personnalisé avec différents instruments analogiques ou numériques.",
+    "Bien que le Savannah ne soit pas conçu avec des ailes repliables de série, certaines versions modifiées peuvent être adaptées pour faciliter le transport ou le stockage.",
+    "Le Savannah peut voler à une altitude maximale de 4 000 mètres.",
+    "La vitesse de croisière du Savannah est d'environ 150 km/h.",
+    "Le Savannah est classé dans la catégorie des ULM 3 axes, ce qui signifie qu'il se pilote comme un avion conventionnel.",
+    "Le premier vol du prototype du Savannah a eu lieu en 1997.",
+    "Plus de 3 000 kits Savannah ont été vendus dans le monde entier.",
+    "Le Savannah est apprécié comme avion-école dans de nombreux clubs ULM.",
+    "La toile des ailes du Savannah est en Diatex, un matériau résistant aux UV et aux intempéries.",
+    "Le Savannah peut être équipé de skis pour atterrir sur la neige.",
+    "L'intérieur du cockpit du Savannah offre 1,10 m de largeur, ce qui est confortable pour deux personnes.",
+    "Le Savannah est disponible en plusieurs versions, dont le Savannah Classic, le Savannah VG et le Savannah S.",
+    "Le projet Savannah est l'un des rares exemples de construction d'ULM dans un cadre pédagogique en France.",
+    "La maintenance d'un Savannah est relativement simple et peut être effectuée par son propriétaire après formation.",
+    "Le Savannah peut être utilisé pour la surveillance aérienne grâce à sa bonne visibilité et son autonomie.",
+    "En vol, le Savannah peut atteindre une vitesse minimale de seulement 45 km/h sans décrocher.",
+    "Le réservoir standard du Savannah contient 65 litres de carburant.",
+    "Le Savannah pèse environ 280 kg à vide et peut emporter jusqu'à 270 kg de charge utile.",
+    "L'assemblage final du Savannah est réalisé à l'aérodrome de Toussus-le-Noble, près de Paris."
+  ];
+
+  // Fonction pour obtenir une anecdote aléatoire
+  function getRandomAnecdote() {
+    const randomIndex = Math.floor(Math.random() * anecdotes.length);
+    return anecdotes[randomIndex];
+  }
+
+  // Fonction pour mettre à jour l'anecdote
+  function updateAnecdote() {
+    document.getElementById('anecdote-text').textContent = getRandomAnecdote();
+  }
+
+  // Fonction pour l'animation du dé
+  function animateDice() {
+    const diceImg = document.getElementById('dice-img');
+    diceImg.classList.add('dice-spin');
+    
+    // Désactiver le bouton pendant l'animation
+    document.getElementById('dice-btn').style.pointerEvents = 'none';
+    
+    setTimeout(() => {
+      // Réactiver le bouton et mettre à jour l'anecdote
+      document.getElementById('dice-btn').style.pointerEvents = 'auto';
+      diceImg.classList.remove('dice-spin');
+      updateAnecdote();
+    }, 800);
+  }
+
+  // Initialiser la première anecdote au chargement de la page
+  document.addEventListener('DOMContentLoaded', () => {
+    updateAnecdote();
+    
+    // Ajouter l'événement de clic sur le dé
+    document.getElementById('dice-btn').addEventListener('click', animateDice);
+  });
+
+  // Script pour la galerie photo
+  document.addEventListener('DOMContentLoaded', () => {
+    // Tableau avec tous les chemins des images
+    const imagesSources = [
+      "/illustration_savannah/1.jpg",
+      "/illustration_savannah/2.jpg",
+      "/illustration_savannah/3.jpg",
+      "/illustration_savannah/4.jpg",
+      "/illustration_savannah/5.jpg",
+      "/illustration_savannah/6.jpg",
+      "/illustration_savannah/7.jpg",
+      "/illustration_savannah/8.jpg",
+      "/illustration_savannah/9.jpg",
+      "/illustration_savannah/10.jpg",
+      "/illustration_savannah/11.jpg",
+      "/illustration_savannah/12.jpg",
+      "/illustration_savannah/13.jpg",
+      "/illustration_savannah/14.jpg",
+      "/illustration_savannah/15.jpg",
+      "/illustration_savannah/16.jpg",
+      "/illustration_savannah/17.jpg",
+      "/illustration_savannah/18.jpg",
+      "/illustration_savannah/19.jpg",
+      "/illustration_savannah/20.jpg",
+      "/illustration_savannah/21.jpg",
+      "/illustration_savannah/22.jpg",
+      "/illustration_savannah/23.jpg",
+      "/illustration_savannah/24.jpg",
+      
+    ];
+    
+    // Mélanger le tableau des images (algorithme de Fisher-Yates)
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Échange d'éléments
+      }
+      return array;
+    }
+    
+    // Mélanger les sources d'images
+    const shuffledSources = shuffleArray([...imagesSources]);
+    
+    // Récupérer la grille de photos
+    const photoGrid = document.getElementById('photo-grid');
+    
+    // Vider la grille existante
+    photoGrid.innerHTML = '';
+    
+    // Nombre d'images par ligne (basé sur grid-template-columns)
+    const imagesPerRow = 4;
+    // Nombre de lignes à afficher initialement
+    const initialRows = 3;
+    // Nombre initial d'images visibles
+    const initialVisibleImages = imagesPerRow * initialRows;
+    
+    // Créer et ajouter les éléments pour chaque image
+    shuffledSources.forEach((src, index) => {
+      const photoItem = document.createElement('div');
+      photoItem.className = 'photo-item';
+      
+      // Cacher les images au-delà du nombre initial d'images visibles
+      if (index >= initialVisibleImages) {
+        photoItem.classList.add('hidden');
+      }
+      
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = 'gallery-img';
+      
+      photoItem.appendChild(img);
+      photoGrid.appendChild(photoItem);
+    });
+    
+    // Gestion du bouton d'expansion
+    const toggleButton = document.getElementById('toggle-button');
+    let isExpanded = false;
+    
+    toggleButton.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      const photoItems = document.querySelectorAll('.photo-item');
+      
+      if (isExpanded) {
+        // Afficher toutes les images
+        photoItems.forEach((item, index) => {
+          if (index >= initialVisibleImages) {
+            item.classList.remove('hidden');
+          }
+        });
+        toggleButton.textContent = '-';
+      } else {
+        // Cacher les images au-delà du nombre initial
+        photoItems.forEach((item, index) => {
+          if (index >= initialVisibleImages) {
+            item.classList.add('hidden');
+          }
+        });
+        toggleButton.textContent = '+';
+      }
+    });
+    
+    // Gestion du modal
+    const modal = document.querySelector('.modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalCaption = document.getElementById('modal-caption');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    // Fonction pour vérifier si l'appareil est mobile
+    function isMobileDevice() {
+      return (window.innerWidth <= 768) || 
+             (navigator.maxTouchPoints > 0) || 
+             (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    }
+    
+    // Ouvrir le modal quand on clique sur une image - uniquement sur desktop
+    document.querySelectorAll('.gallery-img').forEach(img => {
+      img.addEventListener('click', function() {
+        // Ne pas ouvrir la modale sur appareils mobiles
+        if (!isMobileDevice()) {
+          modal.style.display = 'block';
+          modalImg.src = this.src;
+          modalCaption.textContent = this.alt;
+          document.body.style.overflow = 'hidden'; // Empêcher le défilement
+          
+          // Animation d'apparition
+          modal.style.animation = 'modalOpen 0.4s ease-out';
+        }
+      });
+    });
+    
+    // Fermer le modal
+    closeBtn.addEventListener('click', () => {
+      modal.style.animation = 'none';
+      modal.style.display = 'none';
+      document.body.style.overflow = ''; // Réactiver le défilement
+    });
+    
+    // Fermer le modal quand on clique en dehors de l'image
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        modal.style.animation = 'none';
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Réactiver le défilement
+      }
+    });
+
+    // Ajout d'un écouteur pour redimensionnement de l'écran
+    window.addEventListener('resize', function() {
+      // Si la modal est ouverte et qu'on passe en mode mobile, la fermer
+      if (modal.style.display === 'block' && isMobileDevice()) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  
+
+  // Fonction pour ouvrir page partenires
+  function openPageEstaca() {
+            window.open("https://www.estaca.fr", "_blank");
+        }
+  function openPageSafran() {
+            window.open("https://www.safran-group.com/fr/societes/safran-landing-systems", "_blank");
+        }
+  function openPageJousse() {
+            window.open("https://www.aeroclub-jousse.fr", "_blank");
+        }
+  function openPageAfmae() {
+            window.open("https://www.afmae.fr", "_blank");
+        }
+  </script>
+</body>
+</html>
