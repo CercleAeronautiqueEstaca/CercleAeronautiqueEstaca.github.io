@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAE - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar_footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Conteneur pour la navbar -->
+    <div id="navbar-container"></div>
+
+
+    <div class="header">
+        <h1>Cercle Aéronautique de l'Estaca</h1>
+        <img src="/illustration_index/avionCAE.png" alt="Rafale" class="rafale">
+        <div class="board" id="board"></div>
+        
+        <div class="rafale-container">
+        <div class="circle"></div> 
+        </div>
+
+        <button class="takeoff-button" onclick="scrollToHistoryWithOffset()">
+            ✈️ Décollage Immédiat
+        </button>
+
+        <!-- Container des nuages -->
+        <div class="clouds-container">
+            <div class="cloud cloud-left">
+                <img src="/illustration_index/cloud.png">
+            </img>
+            </div>
+            <div class="cloud cloud-right">
+                <img src="/illustration_index/cloud.png">
+            </img>
+            </div>
+           
+        </div>
+    </div>
+    </div>
+
+
+    
+
+    <div class="Histoire">
+        <h1>1988.</h1>
+        <p>
+            Sous l’impulsion d’étudiants passionnés, le Cercle Aéronautique de l’ESTACA (CAE) voit le jour. Son objectif est clair : offrir aux étudiants de l’ESTACA des activités variées, telles que des visites, des baptêmes de l’air, des conférences et des voyages, le tout autour de l’univers de l’aéronautique.
+            Aujourd’hui, fort de plus d’une centaine de membres, le CAE s’efforce de perpétuer l’esprit et les valeurs qui animent l’association depuis sa création.
+        </p>
+        <div class="LogoHistoriques">
+            <div class="LogoHisto">
+                <img src="/illustration_index/Capture d’écran 2024-12-14 à 18.50.21.png" alt="logo historique 1">
+            </div>
+            <div class="LogoHisto">
+                <img src="/illustration_index/Capture d’écran 2024-12-14 à 18.48.43.png" alt="logo historique 2">
+            </div>
+            <div class="LogoHisto">
+                <img src="/illustration_index/logoCAE-reseauxSociauxCarreTransparent.PNG" alt="logo historique 3">
+            </div>
+            <div class="LogoHisto">
+                <img src="/illustration_index/logoCAE2020_BLANC.png" alt="logo historique 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="Nos_activites">
+        <h1>Nos activités</h1>
+        <div class="Cultureetsport">
+            <h1>Culture et sport aéronautique</h1>
+            <div class="Pole" alt ="Event">
+                <div class="logoPole">
+                    <img src="/illustration_index/event.PNG" alt="Pôle Événements" onclick="openPageEvent()">
+                </div>
+                <div class="text">
+                    <h2>Pôle Événements</h2>
+                    <p>
+                        Le Pôle Événements organise tout au long de l'année des activités aéronautiques, des visites, des conférences et des rencontres pour faire vivre la passion de l’aviation à tous les membres du CAE.
+                    </p>
+                </div>
+            </div>
+
+            <div class="Pole" alt ="Sport">
+                <div class="logoPole">
+                    <img src="/illustration_index/sport.PNG" alt="Pôle Sport" onclick="openPageSport()">
+                </div>
+                <div class="text">
+                    <h2>Pôle Sports aériens et formations</h2>
+                    <p>
+                        Le Pôle Événements organise tout au long de l'année des activités aéronautiques, des visites, des conférences et des rencontres pour faire vivre la passion de l’aviation à tous les membres du CAE.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="Nos_projets">
+            <h1>Les projets techniques</h1>
+            <div class="Pole" alt ="ACS">
+                <div class="logoPole">
+                    <img src="/illustration_index/ACS.PNG" alt="ACS" onclick="openPageACS()">
+                </div>
+                <div class="text">
+                    <h2>Airbus Cockpit System</h2>
+                    <p>
+                        Le Pôle Événements organise tout au long de l'année des activités aéronautiques, des visites, des conférences et des rencontres pour faire vivre la passion de l’aviation à tous les membres du CAE.
+                    </p>
+                </div>
+            </div>
+
+            <div class="Pole" alt ="Savannah">
+                <div class="logoPole">
+                    <img src="/illustration_index/Savannah.PNG" alt="Savannah" onclick="openPageSavannah()">
+                </div>
+                <div class="text">
+                    <h2>Savannah</h2>
+                    <p>
+                        Le Pôle Événements organise tout au long de l'année des activités aéronautiques, des visites, des conférences et des rencontres pour faire vivre la passion de l’aviation à tous les membres du CAE.
+                    </p>
+                </div>
+            </div>
+
+            <div class="Pole" alt ="Heritage">
+                <div class="logoPole">
+                    <img src="/illustration_index/heritage.PNG" alt="Heritage" onclick="openPageHeritage()">
+                </div>
+                <div class="text">
+                    <h2>Heritage 1876</h2>
+                    <p>
+                        Le Pôle Événements organise tout au long de l'année des activités aéronautiques, des visites, des conférences et des rencontres pour faire vivre la passion de l’aviation à tous les membres du CAE.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="StrategieetCommunication">
+            <h1>Strategie et communication</h1>
+            <div class="Pole" alt ="Bureau">
+                <div class="logoPole">
+                    <img src="/illustration_index/bureau.PNG" alt="Pôle Bureau" >
+                </div>
+                <div class="text">
+                    <h2>Bureau</h2>
+                    <p>
+                        Le Pôle Événements organise tout au long de l'année des activités aéronautiques, des visites, des conférences et des rencontres pour faire vivre la passion de l’aviation à tous les membres du CAE.
+                    </p>
+                </div>
+            </div>
+
+            <div class="Pole" alt ="communication">
+                <div class="logoPole">
+                    <img src="/illustration_index/com.PNG" alt="Pôle COM" >
+                </div>
+                <div class="text">
+                    <h2>Pôle communication</h2>
+                    <p>
+                        Le Pôle Événements organise tout au long de l'année des activités aéronautiques, des visites, des conférences et des rencontres pour faire vivre la passion de l’aviation à tous les membres du CAE.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <div class="NospartenairesGlobaux">
+        <h1>Nos partenaires</h1>
+        <div class="carousel-container">
+            <div class="PartenersGlobaux">
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/estaca_logo.png" alt="logo Estaca" onclick="openPageEstaca()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_index/Isae-logo-groupe.jpg" alt="logo Isae" onclick="openPageIsae()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/safran_blanc.png" alt="logo Safran" onclick="openPageSafran()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/Agap2_logo.png" alt="logo Agap2" onclick="openPageAgap2()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/alusteelfrance.png" alt="logo alusteelfrance" onclick="openPageAlusteel()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/CrousVersailles.png" alt="logo Crous Versailles" onclick="openPageCrous()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/logo Afmaé.webp" alt="logo Afmaé" onclick="openPageAfmae()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_index/jousse-50.png" alt="logo jousse" onclick="openPageJousse()">
+                </div>
+
+                <!-- Duplication pour un défilement continu -->
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/estaca_logo.png" alt="logo Estaca" onclick="openPageEstaca()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_index/Isae-logo-groupe.jpg" alt="logo Isae" onclick="openPageIsae()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/safran_blanc.png" alt="logo Safran" onclick="openPageSafran()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/Agap2_logo.png" alt="logo Agap2" onclick="openPageAgap2()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/alusteelfrance.png" alt="logo alusteelfrance" onclick="openPageAlusteel()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/CrousVersailles.png" alt="logo Crous Versailles" onclick="openPageCrous()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/logo Afmaé.webp" alt="logo Afmaé" onclick="openPageAfmae()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_index/jousse-50.png" alt="logo jousse" onclick="openPageJousse()">
+                </div>
+
+                <!-- Duplication pour un défilement continu -->
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/estaca_logo.png" alt="logo Estaca" onclick="openPageEstaca()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_index/Isae-logo-groupe.jpg" alt="logo Isae" onclick="openPageIsae()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/safran_blanc.png" alt="logo Safran" onclick="openPageSafran()">
+                </div>
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/Agap2_logo.png" alt="logo Agap2" onclick="openPageAgap2()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/alusteelfrance.png" alt="logo alusteelfrance" onclick="openPageAlusteel()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/CrousVersailles.png" alt="logo Crous Versailles" onclick="openPageCrous()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_partenaires/logo Afmaé.webp" alt="logo Afmaé" onclick="openPageAfmae()">
+                </div>
+
+                <div class="LogoPartenaires">
+                    <img src="/illustration_index/jousse-50.png" alt="logo jousse" onclick="openPageJousse()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ReseauxSociaux">
+        <h1>Nous suivre</h1>
+        <div class="logosReseau">
+            <div class="Reseau">
+                <img src="/illustration_index/Instagram_icon.png" alt="Instagram" onclick="openPageInstagram()" >
+            </div>
+            <div class="Reseau">
+                <img src="/illustration_index/Facebook_logo.png" alt="Facebook" onclick="openPageFacebook()">
+            </div>
+            <div class="Reseau">
+                <img src="/illustration_index/LinkedIn_logo.png" alt="LinkedIn" onclick="openPageLinkedIn()">
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteneur pour le footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Charger la navbar
+     fetch('navbar.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erreur lors du chargement de la navbar.');
+          }
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById('navbar-container').innerHTML = html;
+          attachNavbarEvents();
+        })
+        .catch(error => {
+          console.error('Erreur navbar :', error);
+        });
+
+      // Charger le footer
+      fetch('footer.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erreur lors du chargement du footer.');
+          }
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById('footer-container').innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Erreur footer :', error);
+        });
+
+        // Fonction pour attacher les événements de la navbar
+        function attachNavbarEvents() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.style.transform = navLinks.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+                });
+            }
+        }
+
+        function scrollToHistoryWithOffset() {
+            const histoireSection = document.querySelector('.Histoire h1');
+            if (histoireSection) {
+                const offsetTop = histoireSection.offsetTop;
+                
+                window.scrollTo({
+                    top: offsetTop - 120, 
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Gestion des nuages en mode mobile au scroll
+        function handleMobileClouds() {
+            if (window.innerWidth <= 768) {
+                const cloudsContainer = document.querySelector('.clouds-container');
+                const header = document.querySelector('.header');
+                
+                window.addEventListener('scroll', () => {
+                    const scrollPosition = window.scrollY;
+                    const headerHeight = header.offsetHeight;
+                    
+                    // Afficher les nuages quand on commence à scroller
+                    if (scrollPosition > 100 && scrollPosition < headerHeight - 200) {
+                        cloudsContainer.classList.add('mobile-clouds-visible');
+                    } else {
+                        cloudsContainer.classList.remove('mobile-clouds-visible');
+                    }
+                });
+            }
+        }
+        
+        // Fonction pour gérer l'animation des nuages au scroll
+        function handleCloudsOnScroll() {
+            const cloudsContainer = document.querySelector('.clouds-container');
+            const header = document.querySelector('.header');
+            
+            if (!cloudsContainer || !header) return;
+            
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                const headerHeight = header.offsetHeight;
+                
+                // Activer les nuages dès qu'on commence à scroller
+                if (scrollPosition > 10) {
+                    cloudsContainer.classList.add('scroll-active');
+                } else {
+                    cloudsContainer.classList.remove('scroll-active');
+                }
+                
+            
+            });
+        }
+
+        
+        window.onload = function() {
+            handleCloudsOnScroll(); 
+            handleMobileClouds(); 
+        }
+        // Fonction pour ouvrir une nouvelle page
+        function openPageEvent() {
+            window.open("event.html", "_blank");
+        }
+        function openPageACS() {
+            window.open("ACS.html", "_blank");
+        }
+
+        function openPageSavannah() {
+            window.open("Savannah.html", "_blank");
+        }
+        function openPageHeritage() {
+            window.open("Heritage.html", "_blank");
+        }
+        function openPageSport() {
+            window.open("sport.html", "_blank");
+        }
+        function openPageInstagram() {
+            window.open("https://www.instagram.com/caestaca?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", "_blank");
+        }
+
+        function openPageFacebook() {
+            window.open("https://www.facebook.com/caestaca", "_blank");
+        }
+        function openPageLinkedIn() {
+            window.open("https://www.linkedin.com/company/caestaca/", "_blank");
+        }
+        function openPageEstaca() {
+            window.open("https://www.estaca.fr/", "_blank");
+        }
+        function openPageIsae() {
+            window.open("https://www.groupe-isae.fr", "_blank");
+        }
+        function openPageSafran() {
+            window.open("https://www.safran-group.com/fr/societes/safran-landing-systems", "_blank");
+        }
+        function openPageAgap2() {
+            window.open("https://www.agap2.fr", "_blank");
+        }
+        function openPageAlusteel() {
+            window.open("https://www.alusteel.fr", "_blank");
+        }
+        function openPageCrous() {
+            window.open("https://www.crous-versailles.fr", "_blank");
+        }
+        function openPageAfmae() {
+            window.open("https://www.afmae.fr/", "_blank");
+        }
+        function openPageJousse() {
+            window.open("https://www.aeroclub-jousse.fr", "_blank");
+        }
+
+        const targetText = "↓BOARDING NOW↓";
+        const alphabet = "WONGNIDRAOB↓ ";
+        const board = document.getElementById("board");
+
+        // Création du panneau
+        for (let i = 0; i < targetText.length; i++) {
+            const letterBox = document.createElement("div");
+            letterBox.className = "letter";
+
+            const flap = document.createElement("div");
+            flap.className = "flap";
+            flap.textContent = " ";
+
+            letterBox.appendChild(flap);
+            board.appendChild(letterBox);
+        }
+
+        function animateLetter(letterElement, targetChar, delay = 0) {
+            const flap = letterElement.querySelector(".flap");
+            let index = 0;
+
+            function flip() {
+            const currentChar = alphabet[index % alphabet.length];
+            flap.textContent = currentChar;
+
+            // Animation "flip"
+            flap.style.transform = "rotateX(90deg)";
+            setTimeout(() => {
+                flap.style.transform = "rotateX(0deg)";
+            }, 100);
+
+            if (currentChar !== targetChar) {
+                index++;
+                setTimeout(flip, 80);
+            }
+            }
+
+            setTimeout(flip, delay);
+        }
+
+        // Lancer chaque animation
+        const letters = document.querySelectorAll(".letter");
+        letters.forEach((letter, i) => {
+            const targetChar = targetText[i];
+            animateLetter(letter, targetChar, i * 150);
+        });
+    </script>
+
+</body>
+</html>
