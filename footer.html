@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À propos du CAE</h3>
+                <p>Le Cercle Aéronautique de l'Estaca est une association étudiante passionnée par l'aéronautique !</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Nos activités</h3>
+                <ul>
+                    <li><a href="event.html" target="_blank">Pôle Évenements</a></li>
+                    <li><a href="sport.html" target="_blank">Pôle Sport aériens et Formations</a></li>
+                    <li><a href="ACS.html" target="_blank">Projet ACS</a></li>
+                    <li><a href="Savannah.html" target="_blank">Projet Savannah</a></li>
+                    <li><a href="Heritage.html" target="_blank">Projet Heritage 1876</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul><li><a href="Contacts.html">Nous contacter</a></li></ul>
+                <p>12 Avenue Paul Delouvrier, 78180 Montigny-le-Bretonneux</p>
+                <p>Email: cercleaero@estaca.eu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Cercle Aéronautique de l'Estaca. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    // Fonction pour aller à la section activité (nav bar index)
+    function goToHistory() {
+        if (window.location.pathname.includes("index.html") || window.location.pathname === "/" || window.location.pathname.endsWith("/index.html")) {
+            scrollToHistoryWithOffset();
+        } else {
+            window.location.href = "index.html#activites";
+        }
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</html>

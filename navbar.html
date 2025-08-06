@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar" id="main-navbar">
+        
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="illustration_index/logoCAE2020_BLANC.png" alt="Logo" class="logo">
+            </a>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links" id="nav-links-menu">
+            <li><a href="#" onclick="goToHistory()">Je découvre</a></li>
+            
+            <!-- Nos événements avec dropdown -->
+            <li>
+                <a href="#evenements" class="dropdown-trigger" data-dropdown="evenements">Nos évènements</a>
+                <div class="dropdown" id="dropdown-evenements">
+                    <div class="dropdown-content">
+                        <a href="event.html" class="dropdown-item">
+                            <img src="illustration_index/event.PNG" alt="dropdown-Logo" class="dropdown-logo">
+                            <div class="dropdown-info">
+                                <h4>Pôle Événements</h4>
+                                <p>Découvrez tous nos événements</p>
+                            </div>
+                        </a>
+                        <a href="sport.html" class="dropdown-item">
+                            <img src="illustration_index/sport.PNG" alt="dropdown-Logo" class="dropdown-logo">
+                            <div class="dropdown-info">
+                                <h4>Pôle Sport</h4>
+                                <p>Découvrez le sport aérien</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Nos projets avec dropdown -->
+            <li>
+                <a href="#projets" class="dropdown-trigger" data-dropdown="projets">Nos projets</a>
+                <div class="dropdown" id="dropdown-projets">
+                    <div class="dropdown-content">
+                        <a href="ACS.html" class="dropdown-item">
+                            <img src="illustration_index/ACS.PNG" alt="dropdown-Logo" class="dropdown-logo">
+                            <div class="dropdown-info">
+                                <h4>Airbus Cockpit System</h4>
+                                <p>Le simulateur A320</p>
+                            </div>
+                        </a>
+                        <a href="Savannah.html" class="dropdown-item">
+                            <img src="illustration_index/Savannah.PNG" alt="dropdown-Logo" class="dropdown-logo">
+                            <div class="dropdown-info">
+                                <h4>Savannah</h4>
+                                <p>Un ULM à Monter</p>
+                            </div>
+                        </a>
+                        <a href="Heritage.html" class="dropdown-item">
+                            <img src="illustration_index/heritage.PNG" alt="dropdown-Logo" class="dropdown-logo">
+                            <div class="dropdown-info">
+                                <h4>Héritage 1876</h4>
+                                <p>Un projet Historique</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            
+            <li><a href="Contacts.html">Nous contacter</a></li>
+        </ul>
+        <button class="nav-btn">J'adhère au CAE</button>
+    </nav>
+
+    <script>
+        // Script pour la navbar responsive et les dropdowns
+        const menuToggle = document.getElementById('menu-toggle-btn');
+        const navLinks = document.getElementById('nav-links-menu');
+        const navbar = document.getElementById('main-navbar');
+
+        // Fonction pour aller à la section histoire (index)
+        function goToHistory() {
+            if (window.location.pathname.includes("index.html") || window.location.pathname === "/" || window.location.pathname.endsWith("/index.html")) {
+                scrollToHistoryWithOffset();
+            } else {
+                window.location.href = "index.html#histoire";
+            }
+        }
+
+        // Toggle menu mobile
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('rotate');
+        });
+
+        // Effet de scroll sur la navbar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Gestion des dropdowns sur mobile
+        document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const dropdownId = 'dropdown-' + trigger.dataset.dropdown;
+                    const dropdown = document.getElementById(dropdownId);
+                    const parentLi = trigger.parentElement;
+                    
+                    // Fermer les autres dropdowns
+                    document.querySelectorAll('.dropdown').forEach(d => {
+                        if (d.id !== dropdownId) {
+                            d.classList.remove('active');
+                        }
+                    });
+                    document.querySelectorAll('.nav-links li').forEach(li => {
+                        if (li !== parentLi) {
+                            li.classList.remove('dropdown-open');
+                        }
+                    });
+                    
+                    // Toggle le dropdown actuel
+                    dropdown.classList.toggle('active');
+                    parentLi.classList.toggle('dropdown-open');
+                }
+            });
+        });
+
+        // Fermer le menu mobile quand on clique sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768 && !link.classList.contains('dropdown-trigger')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
