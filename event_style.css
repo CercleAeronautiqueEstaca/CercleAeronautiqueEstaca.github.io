@@ -123,7 +123,7 @@
 }
 
 .menu-button .conferences {
-    background-image: url('/SITE CAE/logo CAE/conferences.JPG');
+    background-image: url('/illustration_event/conferences.JPG');
     background-size:contain;
     background-position: center;
     width: 100%;
@@ -135,7 +135,7 @@
     
 }
 .menu-button .visites {
-    background-image: url('/SITE CAE/logo CAE/visites.JPG');
+    background-image: url('/illustration_event/visites.JPG');
     background-size:contain;
     background-position: center;
     width: 100%;
@@ -145,7 +145,7 @@
     justify-content: center;
 }
 .menu-button .voyages {
-    background-image: url('/SITE CAE/logo CAE/voyage.JPG');
+    background-image: url('/illustration_event/voyage.JPG');
     background-size:contain;
     background-position: center;
     width: 100%;
@@ -156,7 +156,7 @@
 }
 
 .menu-button .soiree {
-    background-image: url('/SITE CAE/logo CAE/soiree.JPG');
+    background-image: url('/illustration_event/soiree.JPG');
     background-size:contain;
     background-position: center;
     width: 100%;
