@@ -9,6 +9,10 @@
             min-height: 100vh;
         }
 
+        .nav-btn {
+            text-decoration: none;
+        }
+
         .navbar {
             position: fixed;
             top: 0;
