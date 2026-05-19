@@ -85,6 +85,7 @@
                     <div class="partenaires_secondaires">
                         <img src="/illustration_partenaires/Norelem.png" alt="Norelem" onclick="openPageNorelem()">
                         <img src="/illustration_partenaires/alusteelfrance.png" alt="alusteelfrance" onclick="openPageAlusteel()">
+                        <img src="/illustration_partenaires/Thales-Logo.png" alt="ThalesAEC" onclick="openPageThales()">
                         <img src="/illustration_partenaires/CrousVersailles.png" alt="Crous" onclick="openPageCrous()">
 
                     </div>
@@ -231,7 +232,7 @@
             }
         }
       
-      // OUverture de la page d'événements
+      // Ouverture de la page d'événements
         const eventButton = document.querySelector('.event-button');
         if (eventButton) {
             eventButton.addEventListener('click', openPageEvent);
@@ -256,6 +257,11 @@
         function openPageAlusteel() {
             window.open("https://www.alusteelfrance.fr", "_blank");
         }
+
+        function openPageThales() {
+            window.open("https://www.thalesgroup.com/fr", "_blank");
+        }
+
         function openPageCrous() {
             window.open("https://www.crous-versailles.fr", "_blank");
         }
